@@ -17,6 +17,8 @@ The system intelligently switches between three operational states based on hand
 * **Function:** Optimized specifically for navigating PowerPoint, Keynote, or PDF slide decks.
 * **Interaction:** Uses simple **flick/fist gestures** to trigger "Next Slide" or "Previous Slide." This allows speakers to control their presentation from a distance without ever touching the keyboard or a clicker.
 
+## ![Project Mindmap](System_Architecture_Mindmap)
+
 ## Prerequisites
 - Python 3.8+
 - Webcam
