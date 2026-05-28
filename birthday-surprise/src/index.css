@@ -1,0 +1,120 @@
+@import 'tailwindcss';
+
+:root {
+  font-family: 'Inter', 'Avenir Next', 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #1e293b;
+}
+
+.glass-panel {
+  background: linear-gradient(130deg, rgba(255, 255, 255, 0.56), rgba(255, 243, 230, 0.4));
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+}
+
+.sparkle {
+  position: absolute;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 72%);
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+.cloud {
+  position: absolute;
+  border-radius: 999px;
+  opacity: 0.5;
+  filter: blur(10px);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.78), rgba(233, 247, 255, 0.46));
+  animation: drift 22s linear infinite;
+}
+
+.cloud-a {
+  width: 190px;
+  height: 58px;
+  top: 12%;
+  left: -12%;
+}
+
+.cloud-b {
+  width: 140px;
+  height: 42px;
+  top: 22%;
+  right: -16%;
+  animation-duration: 28s;
+  animation-direction: reverse;
+}
+
+.cloud-c {
+  width: 210px;
+  height: 56px;
+  top: 30%;
+  left: -20%;
+  animation-duration: 32s;
+}
+
+.wave {
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  bottom: -48px;
+  border-radius: 48% 52% 0 0;
+  transform-origin: center;
+}
+
+.wave-back {
+  height: 180px;
+  background: radial-gradient(circle at 50% 0%, rgba(191, 233, 255, 0.95), rgba(122, 196, 236, 0.78));
+  animation: ocean 10s ease-in-out infinite;
+}
+
+.wave-mid {
+  height: 150px;
+  background: radial-gradient(circle at 50% 0%, rgba(159, 218, 250, 0.76), rgba(77, 158, 211, 0.62));
+  animation: ocean 7s ease-in-out infinite reverse;
+}
+
+.wave-front {
+  height: 120px;
+  background: radial-gradient(circle at 50% 0%, rgba(208, 242, 255, 0.55), rgba(124, 195, 224, 0.48));
+  animation: ocean 5.4s ease-in-out infinite;
+}
+
+@keyframes ocean {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-2.3%) translateY(-10px);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(140vw);
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.75);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
